@@ -1,0 +1,188 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Fivers Board</title>
+<meta name="generator" content="WYSIWYG Web Builder 19 Trial Version - https://www.wysiwygwebbuilder.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="Untitled3.css" rel="stylesheet">
+<link href="index.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+</head>
+<body>
+<div id="wb_LayoutGrid1">
+<div id="LayoutGrid1">
+<div class="row">
+<div class="col-1">
+<div id="wb_Text1">
+<span style="color:#000000;font-family:'MS Gothic';font-size:37px;">GUILD PRIORITY MONSTER</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid2">
+<div id="LayoutGrid2">
+<div class="row">
+<div class="col-1">
+</div>
+<div class="col-2">
+<div id="wb_Text2">
+<span style="color:#000000;font-family:'MS Gothic';font-size:35px;"><div id="dateNow">2024 - 09 - 10 12:00~</div></span>
+</div>
+</div>
+<div class="col-3">
+<button onclick="getMonster()">Next</button>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid3">
+<div id="LayoutGrid3">
+<div class="row">
+<div class="col-1">
+</div>
+<div class="col-2">
+<div id="wb_Text8">
+<span style="color:#000000;font-family:'MS Gothic';font-size:24px;">Hiden Soul (Low)</span>
+</div>
+</div>
+<div class="col-3">
+<div id="wb_Text7">
+<span style="color:#000000;font-family:'MS Gothic';font-size:24px;">Hiden Soul (Mid)</span>
+</div>
+</div>
+<div class="col-4">
+<div id="wb_Text12">
+<span style="color:#000000;font-family:'MS Gothic';font-size:24px;">Hiden Soul (High)</span>
+</div>
+</div>
+<div class="col-5">
+<div id="wb_Text11">
+<span style="color:#000000;font-family:'MS Gothic';font-size:24px;">Hiden Soul (Top)</span>
+</div>
+</div>
+<div class="col-6">
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid4">
+<div id="LayoutGrid4">
+<div class="row">
+<div class="col-1">
+</div>
+<div class="col-2">
+<div id="wb_Image1" style="display:block;width:100%;height:auto;z-index:7;">
+<img src="images/R (1).png" id="Image1" alt="" width="131" height="131">
+</div>
+</div>
+<div class="col-3">
+<div id="wb_Image2" style="display:block;width:100%;height:auto;z-index:8;">
+<img src="images/R (1).png" id="Image2" alt="" width="131" height="131">
+</div>
+</div>
+<div class="col-4">
+<div id="wb_Image3" style="display:block;width:100%;height:auto;z-index:9;">
+<img src="images/R (1).png" id="Image3" alt="" width="131" height="131">
+</div>
+</div>
+<div class="col-5">
+<div id="wb_Image4" style="display:block;width:100%;height:auto;z-index:10;">
+<img src="images/R (1).png" id="Image4" alt="" width="131" height="131">
+</div>
+</div>
+<div class="col-6">
+</div>
+</div>
+</div>
+</div>
+<div id="wb_LayoutGrid5">
+<div id="LayoutGrid5">
+<div class="row">
+<div class="col-1">
+</div>
+<div class="col-2">
+<div id="wb_Text3">
+<span style="color:#000000;font-family:'MS Gothic';font-size:24px;"><div id="lowsoul">Rathian</div></span>
+</div>
+</div>
+<div class="col-3">
+<div id="wb_Text4">
+<span style="color:#000000;font-family:'MS Gothic';font-size:24px;"><div id="midsoul">Rathian</div></span>
+</div>
+</div>
+<div class="col-4">
+<div id="wb_Text5">
+<span style="color:#000000;font-family:'MS Gothic';font-size:24px;"><div id="hisoul">Rathian</div></span>
+</div>
+</div>
+<div class="col-5">
+<div id="wb_Text6">
+<span style="color:#000000;font-family:'MS Gothic';font-size:24px;"><div id="topsoul">Rathian</div></span>
+</div>
+</div>
+<div class="col-6">
+</div>
+</div>
+</div>
+</div>
+<script>
+var currentDate = new Date();
+//var day = currentDate.getDay();         // Day of the week (0-6, where 0 is Sunday)
+var date = currentDate.getDate();       // Day of the month (1-31)
+var month = currentDate.getMonth();     // Month (0-11, where 0 is January)
+var year = currentDate.getFullYear();   // Full year (e.g., 2024)
+var hours = currentDate.getHours();         // Current hour (0-23)
+var minutes = currentDate.getMinutes();     // Current minute (0-59)
+
+const monthName = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+const lowList = ["Chameleos","BlackDiablos","Kirin","RedKhezu","Gypceros","Blangonga","Shogun","PinkRathian","Dyura","BlueKut-Ku","Basarios","Congalala","Hypnoc","AzureRathalos","Lavasioth"];
+const midList = ["Kushala","Tigrex","BlackDiablos","Akantor","Nono","Espinas","Teostra","BrightHypnoc","RedKhezu","Dora","Rajang","Garuga","PinkRathian","BlueKut-Ku","FlamingEspinas","Kamu","Gravios"];
+const hiList = ["PinkRathian","BrightHypnoc","AzureRathalos","FlamingEspinas","RedKhezu","BlackDiablos","BlueKut-Ku","Garuga","Espinas","Akantor","Tigrex","Basarios","Rajang","Hypnoc","Khezu","Congalala","Kut-Ku","Lavasioth","Gravios","Shogun","Diablos"];
+const topList = ["Kirin","Guren","Kushala","Dyura","Teostra","Dora","Gogomoa"];
+
+var nowDate = year + " " + monthName[month] + " " + date + " - " + hours +":"+ minutes;
+document.getElementById("dateNow").innerHTML = nowDate;
+var incr = 1;
+
+var day = currentDate.getDate();
+var value1 = day % lowList.length;
+var value2 = day % midList.length;
+var value3 = day % hiList.length;
+var value4 = day % topList.length;
+console.log(value1);
+
+document.getElementById("lowsoul").innerHTML = lowList[value1];
+document.getElementById("midsoul").innerHTML = midList[value2];
+document.getElementById("hisoul").innerHTML = hiList[value3];
+document.getElementById("topsoul").innerHTML = topList[value4];
+
+function getMonster(){
+
+value1 = (day+incr) % lowList.length;
+value2 = (day+incr) % midList.length;
+value3 = (day+incr) % hiList.length;
+value4 = (day+incr) % topList.length;
+
+document.getElementById("lowsoul").innerHTML = lowList[value1];
+document.getElementById("midsoul").innerHTML = midList[value2];
+document.getElementById("hisoul").innerHTML = hiList[value3];
+document.getElementById("topsoul").innerHTML = topList[value4];
+
+date = day + incr;
+
+nowDate = year + " " + monthName[month] + " " + date + " - " + hours +":"+ minutes;
+document.getElementById("dateNow").innerHTML = nowDate;
+
+if(date > 29)
+	incr = 0;
+else
+	incr++;
+
+
+console.log(value1);
+}
+</script>
+</body>
+</html>
