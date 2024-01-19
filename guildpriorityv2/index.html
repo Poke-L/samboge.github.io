@@ -7,6 +7,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="Untitled3.css" rel="stylesheet">
   <link href="index.css" rel="stylesheet">
+  <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 50%;
+    }
+
+    table th,
+    table td {
+      padding: 10px;
+      border: 1px solid #ee8813;
+      font-size: 18px;
+      color: #F5F5DC;
+      /* Add more styles as needed */
+    }
+  </style>
 </head>
 
 <body>
@@ -15,7 +31,7 @@
       <div class="row">
         <div class="col-1">
           <div id="wb_Text1">
-            <span style="color:#000000;font-family:'MS Gothic';font-size:37px;">GUILD PRIORITY MONSTER</span>
+            <span style="color: #f5f5dc;;font-family:'MS Gothic';font-size:37px;">GUILD PRIORITY MONSTER</span>
           </div>
         </div>
       </div>
@@ -28,7 +44,7 @@
         </div>
         <div class="col-2">
           <div id="wb_Text2">
-            <span style="color:#000000;font-family:'MS Gothic';font-size:35px;">
+            <span style="color:#F5F5DC;font-family:'MS Gothic';font-size:35px;">
               <div id="dateNow">2024 - 09 - 10 12:00~</div>
             </span>
           </div>
@@ -95,8 +111,7 @@
   <div id="wb_LayoutGrid5">
     <div id="LayoutGrid5">
       <div class="row">
-        <div class="col-1">
-        </div>
+        <div class="col-1"></div>
         <div class="col-2">
         </div>
         <div class="col-3">
@@ -110,9 +125,74 @@
       </div>
     </div>
   </div>
+  <center>
+    <table>
+      <tr>
+        <th>Weapon Soul</th>
+        <th>
+          <div id="tnext1"></div>
+        </th>
+        <th>
+          <div id="tnext2"></div>
+        </th>
+        <th>
+          <div id="tnext3"></div>
+        </th>
+      </tr>
+      <tr>
+        <td>Low</td>
+        <td>
+          <div id="nl1"></div>
+        </td>
+        <td>
+          <div id="nl2"></div>
+        </td>
+        <td>
+          <div id="nl3"></div>
+        </td>
+      </tr>
+      <tr>
+        <td>Mid</td>
+        <td>
+          <div id="nm1"></div>
+        </td>
+        <td>
+          <div id="nm2"></div>
+        </td>
+        <td>
+          <div id="nm3"></div>
+        </td>
+      </tr>
+      <tr>
+        <td>High</td>
+        <td>
+          <div id="nh1">
+        </td>
+        <td>
+          <div id="nh2">
+        </td>
+        <td>
+          <div id="nh3">
+        </td>
+      </tr>
+      <tr>
+        <td>Top</td>
+        <td>
+          <div id="nt1">
+        </td>
+        <td>
+          <div id="nt2">
+        </td>
+        <td>
+          <div id="nt3">
+        </td>
+      </tr>
+    </table>
+  </center>
+  <br><br><br>
   <script>
     //var currentDate = new Date();
-    var scurrentDate = new Date().toLocaleString("en-US", {timeZone: "Asia/Tokyo"});
+    var scurrentDate = new Date().toLocaleString("en-US", { timeZone: "Asia/Tokyo" });
     var currentDate = new Date(scurrentDate);
     //var day = currentDate.getDay();         // Day of the week (0-6, where 0 is Sunday)
     var date = currentDate.getDate();       // Day of the month (1-31)
@@ -124,48 +204,70 @@
 
     const monthName = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     const lowList = ["Chameleos", "Black Diablos", "Kirin", "Red Khezu", "Gypceros", "Blangonga", "Shogun Ceanataur", "Pink Rathian", "Dyuragaua", "Blue Kut-Ku", "Basarios", "Congalala", "Hypnocatrice", "Azure Rathalos", "Lavasioth"];
-    const midList = ["Kushala", "Tigrex", "Black Diablos", "Akantor", "Nono Orugaron", "Espinas", "Teostra", "Bright Hypnocatrice", "Red Khezu", "Doragyurosu", "Rajang", "Garuga", "Pink Rathian", "Blue Kut-Ku", "Flaming Espinas", "Kamu Orugaron", "Gravios"];
+    const midList = ["Akantor", "Nono Orugaron", "Espinas", "Teostra", "Bright Hypnocatrice", "Red Khezu", "Doragyurosu", "Rajang", "Garuga", "Pink Rathian", "Blue Kut-Ku", "Flaming Espinas", "Kamu Orugaron", "Gravios","Kushala", "Tigrex", "Black Diablos"];
     const hiList = ["Pink Rathian", "Bright Hypnocatrice", "Azure Rathalos", "Flaming Espinas", "RedKhezu", "Black Diablos", "Blue Kut-Ku", "Garuga", "Espinas", "Akantor", "Tigrex", "Basarios", "Rajang", "Hypnocatrice", "Khezu", "Congalala", "Kut-Ku", "Lavasioth", "Gravios", "Shogun Ceanataur", "Diablos"];
     const topList = ["Kirin", "Gurenzeburu", "Kushala", "Dyuragaua", "Teostra", "Doragyurosu", "Gogomoa"];
     var incr = 1;
     var day;
 
     function updateTime() {
-    scurrentDate = new Date().toLocaleString("en-US", {timeZone: "Asia/Tokyo"});
-    currentDate = new Date(scurrentDate);
-    //var day = currentDate.getDay();         // Day of the week (0-6, where 0 is Sunday)
-    date = currentDate.getDate();       // Day of the month (1-31)
-    month = currentDate.getMonth();     // Month (0-11, where 0 is January)
-    year = currentDate.getFullYear();   // Full year (e.g., 2024)
-    hours = currentDate.getHours();         // Current hour (0-23)
-    minutes = currentDate.getMinutes();     // Current minute (0-59)
-    minutes = (minutes < 10) ? '0' + minutes : minutes;
-    hours = (hours < 10) ? '0' + hours : hours;
-    //console.log(previousHour)
-    var nowDate = year + " " + monthName[month] + " " + date + " - " + hours + ":" + minutes;
-    document.getElementById("dateNow").innerHTML = nowDate;
+      scurrentDate = new Date().toLocaleString("en-US", { timeZone: "Asia/Tokyo" });
+      currentDate = new Date(scurrentDate);
+      //var day = currentDate.getDay();         // Day of the week (0-6, where 0 is Sunday)
+      date = currentDate.getDate();       // Day of the month (1-31)
+      month = currentDate.getMonth();     // Month (0-11, where 0 is January)
+      year = currentDate.getFullYear();   // Full year (e.g., 2024)
+      hours = currentDate.getHours();         // Current hour (0-23)
+      minutes = currentDate.getMinutes();     // Current minute (0-59)
+      minutes = (minutes < 10) ? '0' + minutes : minutes;
+      hours = (hours < 10) ? '0' + hours : hours;
+      //console.log(previousHour)
+      var nowDate = year + " " + monthName[month] + " " + date + " - " + hours + ":" + minutes;
+      document.getElementById("dateNow").innerHTML = nowDate;
+      nextDate1 = date + 1;
+      nextDate2 = date + 2;
+      nextDate3 = date + 3;
+      document.getElementById("tnext1").innerHTML = monthName[month] + " " + nextDate1;
+      document.getElementById("tnext2").innerHTML = monthName[month] + " " + nextDate2;
+      document.getElementById("tnext3").innerHTML = monthName[month] + " " + nextDate3;
 
-    if (hours > 11) {
-      day = date
-    }
-    else{
-      day = date-1;
-    }
+      if (hours > 11) {
+        day = date
+      }
+      else {
+        day = date - 1;
+      }
 
-    var value1 = day % lowList.length;
-    var value2 = day % midList.length;
-    var value3 = day % hiList.length;
-    var value4 = day % topList.length;
-    console.log(value1);
+      var value1 = day % lowList.length;
+      var value2 = day % midList.length;
+      var value3 = day % hiList.length;
+      var value4 = day % topList.length;
+      console.log(value1);
 
-    document.getElementById("lowsoul").innerHTML = lowList[value1];
-    document.getElementById("midsoul").innerHTML = midList[value2];
-    document.getElementById("hisoul").innerHTML = hiList[value3];
-    document.getElementById("topsoul").innerHTML = topList[value4];
-    displayImage(lowList[value1], 2);
-    displayImage(midList[value2], 4);
-    displayImage(hiList[value3], 1);
-    displayImage(topList[value4], 3);
+      document.getElementById("lowsoul").innerHTML = lowList[value1];
+      document.getElementById("midsoul").innerHTML = midList[value2];
+      document.getElementById("hisoul").innerHTML = hiList[value3];
+      document.getElementById("topsoul").innerHTML = topList[value4];
+      displayImage(lowList[value1], 2);
+      displayImage(midList[value2], 4);
+      displayImage(hiList[value3], 1);
+      displayImage(topList[value4], 3);
+
+      document.getElementById("nl1").innerHTML = lowList[(value1 + 1) % lowList.length];
+      document.getElementById("nl2").innerHTML = lowList[(value1 + 2) % lowList.length];
+      document.getElementById("nl3").innerHTML = lowList[(value1 + 3) % lowList.length];
+
+      document.getElementById("nm1").innerHTML = midList[(value2 + 1) % midList.length];
+      document.getElementById("nm2").innerHTML = midList[(value2 + 2) % midList.length];
+      document.getElementById("nm3").innerHTML = midList[(value2 + 3) % midList.length];
+
+      document.getElementById("nh1").innerHTML = hiList[(value3 + 1) % hiList.length];
+      document.getElementById("nh2").innerHTML = hiList[(value3 + 2) % hiList.length];
+      document.getElementById("nh3").innerHTML = hiList[(value3 + 3) % hiList.length];
+
+      document.getElementById("nt1").innerHTML = topList[(value4 + 1) % topList.length];
+      document.getElementById("nt2").innerHTML = topList[(value4 + 2) % topList.length];
+      document.getElementById("nt3").innerHTML = topList[(value4 + 3) % topList.length];
     }
     //var nowDate = year + " " + monthName[month] + " " + date + " - " + hours + ":" + minutes;
     //document.getElementById("dateNow").innerHTML = nowDate;
