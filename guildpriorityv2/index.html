@@ -1,0 +1,205 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Fivers Guild Priority Board</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="Untitled3.css" rel="stylesheet">
+  <link href="index.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="wb_LayoutGrid1">
+    <div id="LayoutGrid1">
+      <div class="row">
+        <div class="col-1">
+          <div id="wb_Text1">
+            <span style="color:#000000;font-family:'MS Gothic';font-size:37px;">GUILD PRIORITY MONSTER</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="wb_LayoutGrid2">
+    <div id="LayoutGrid2">
+      <div class="row">
+        <div class="col-1">
+        </div>
+        <div class="col-2">
+          <div id="wb_Text2">
+            <span style="color:#000000;font-family:'MS Gothic';font-size:35px;">
+              <div id="dateNow">2024 - 09 - 10 12:00~</div>
+            </span>
+          </div>
+        </div>
+        <div class="col-3">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="wb_LayoutGrid4">
+    <div id="LayoutGrid4">
+      <div class="row">
+        <div class="col-1">
+          <div id="wb_Card2" style="display:flex;width:100%;z-index:2;" class="card">
+            <div id="Card2-card-body">
+              <div id="Card2-card-item0"><br>Weapon Soul (Low)<br></div>
+              <img id="Card2-card-item1" src="images/R (1).png" width="308" height="308" alt="" title="">
+              <div id="Card2-card-item2">
+                <div id="lowsoul">Rathian</div>
+              </div>
+              <div id="Card2-card-item3"><br>Low Rank<br>SR1-SR30<br>Hardcore Only<br></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div id="wb_Card4" style="display:flex;width:100%;z-index:3;" class="card">
+            <div id="Card4-card-body">
+              <div id="Card4-card-item0"><br>Weapon Soul (Mid)<br></div>
+              <img id="Card4-card-item1" src="images/R (1).png" width="308" height="308" alt="" title="">
+              <div id="Card4-card-item2">
+                <div id="midsoul">Rathian</div>
+              </div>
+              <div id="Card4-card-item3"><br>High Rank<br>SR31-SR99<br>Hardcore Only<br></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div id="wb_Card1" style="display:flex;width:100%;z-index:4;" class="card">
+            <div id="Card1-card-body">
+              <div id="Card1-card-item0"><br>Weapon Soul (High)<br></div>
+              <img id="Card1-card-item1" src="images/R (1).png" width="308" height="308" alt="" title="">
+              <div id="Card1-card-item2">
+                <div id="hisoul">Rathian</div>
+              </div>
+              <div id="Card1-card-item3"><br>Henshu<br>SR100<br>Hardcore Only<br></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div id="wb_Card3" style="display:flex;width:100%;z-index:5;" class="card">
+            <div id="Card3-card-body">
+              <div id="Card3-card-item0"><br>Weapon Soul (Top)<br></div>
+              <img id="Card3-card-item1" src="images/R (1).png" width="308" height="308" alt="" title="">
+              <div id="Card3-card-item2">
+                <div id="topsoul">Rathian</div>
+              </div>
+              <div id="Card3-card-item3"><br>Gousu<br>SR100-SR300<br>Hardcore Only<br></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="wb_LayoutGrid5">
+    <div id="LayoutGrid5">
+      <div class="row">
+        <div class="col-1">
+        </div>
+        <div class="col-2">
+        </div>
+        <div class="col-3">
+        </div>
+        <div class="col-4">
+        </div>
+        <div class="col-5">
+        </div>
+        <div class="col-6">
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    //var currentDate = new Date();
+    var scurrentDate = new Date().toLocaleString("en-US", {timeZone: "Asia/Tokyo"});
+    var currentDate = new Date(scurrentDate);
+    //var day = currentDate.getDay();         // Day of the week (0-6, where 0 is Sunday)
+    var date = currentDate.getDate();       // Day of the month (1-31)
+    var month = currentDate.getMonth();     // Month (0-11, where 0 is January)
+    var year = currentDate.getFullYear();   // Full year (e.g., 2024)
+    var hours = currentDate.getHours();         // Current hour (0-23)
+    var minutes = currentDate.getMinutes();     // Current minute (0-59)
+    //console.log(previousHour)
+
+    const monthName = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    const lowList = ["Chameleos", "Black Diablos", "Kirin", "Red Khezu", "Gypceros", "Blangonga", "Shogun Ceanataur", "Pink Rathian", "Dyuragaua", "Blue Kut-Ku", "Basarios", "Congalala", "Hypnocatrice", "Azure Rathalos", "Lavasioth"];
+    const midList = ["Kushala", "Tigrex", "Black Diablos", "Akantor", "Nono Orugaron", "Espinas", "Teostra", "Bright Hypnocatrice", "Red Khezu", "Doragyurosu", "Rajang", "Garuga", "Pink Rathian", "Blue Kut-Ku", "Flaming Espinas", "Kamu Orugaron", "Gravios"];
+    const hiList = ["Pink Rathian", "Bright Hypnocatrice", "Azure Rathalos", "Flaming Espinas", "RedKhezu", "Black Diablos", "Blue Kut-Ku", "Garuga", "Espinas", "Akantor", "Tigrex", "Basarios", "Rajang", "Hypnocatrice", "Khezu", "Congalala", "Kut-Ku", "Lavasioth", "Gravios", "Shogun Ceanataur", "Diablos"];
+    const topList = ["Kirin", "Gurenzeburu", "Kushala", "Dyuragaua", "Teostra", "Doragyurosu", "Gogomoa"];
+    var incr = 1;
+    var day;
+
+    function updateTime() {
+    scurrentDate = new Date().toLocaleString("en-US", {timeZone: "Asia/Tokyo"});
+    currentDate = new Date(scurrentDate);
+    //var day = currentDate.getDay();         // Day of the week (0-6, where 0 is Sunday)
+    date = currentDate.getDate();       // Day of the month (1-31)
+    month = currentDate.getMonth();     // Month (0-11, where 0 is January)
+    year = currentDate.getFullYear();   // Full year (e.g., 2024)
+    hours = currentDate.getHours();         // Current hour (0-23)
+    minutes = currentDate.getMinutes();     // Current minute (0-59)
+    minutes = (minutes < 10) ? '0' + minutes : minutes;
+    hours = (hours < 10) ? '0' + hours : hours;
+    //console.log(previousHour)
+    var nowDate = year + " " + monthName[month] + " " + date + " - " + hours + ":" + minutes;
+    document.getElementById("dateNow").innerHTML = nowDate;
+
+    if (hours > 11) {
+      day = date
+    }
+    else{
+      day = date-1;
+    }
+
+    var value1 = day % lowList.length;
+    var value2 = day % midList.length;
+    var value3 = day % hiList.length;
+    var value4 = day % topList.length;
+    console.log(value1);
+
+    document.getElementById("lowsoul").innerHTML = lowList[value1];
+    document.getElementById("midsoul").innerHTML = midList[value2];
+    document.getElementById("hisoul").innerHTML = hiList[value3];
+    document.getElementById("topsoul").innerHTML = topList[value4];
+    displayImage(lowList[value1], 2);
+    displayImage(midList[value2], 4);
+    displayImage(hiList[value3], 1);
+    displayImage(topList[value4], 3);
+    }
+    //var nowDate = year + " " + monthName[month] + " " + date + " - " + hours + ":" + minutes;
+    //document.getElementById("dateNow").innerHTML = nowDate;
+
+    function getMonster() {
+
+      value1 = (day + incr) % lowList.length;
+      value2 = (day + incr) % midList.length;
+      value3 = (day + incr) % hiList.length;
+      value4 = (day + incr) % topList.length;
+
+      document.getElementById("lowsoul").innerHTML = lowList[value1];
+      document.getElementById("midsoul").innerHTML = midList[value2];
+      document.getElementById("hisoul").innerHTML = hiList[value3];
+      document.getElementById("topsoul").innerHTML = topList[value4];
+
+      date = day + incr;
+
+      nowDate = year + " " + monthName[month] + " " + date + " - " + hours + ":" + minutes;
+      document.getElementById("dateNow").innerHTML = nowDate;
+
+      if (date > 29)
+        incr = 0;
+      else
+        incr++;
+      console.log(value1);
+    }
+    function displayImage(name, index) {
+      var imgElement = document.getElementById("Card" + index + "-card-item1"); // Get the <img> element by its id
+      imgElement.src = "images/monsicon/" + name + ".png"; // Update the src attribute of the image
+    }
+
+    setInterval(updateTime, 1000);
+  </script>
+</body>
+
+</html>
