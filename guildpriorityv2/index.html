@@ -247,11 +247,13 @@
       document.getElementById("lowsoul").innerHTML = lowList[value1];
       document.getElementById("midsoul").innerHTML = midList[value2];
       document.getElementById("hisoul").innerHTML = hiList[value3];
-      document.getElementById("topsoul").innerHTML = topList[value4];
+      //document.getElementById("topsoul").innerHTML = topList[value4];
+	  document.getElementById("topsoul").innerHTML = "to be discovered";
       displayImage(lowList[value1], 2);
       displayImage(midList[value2], 4);
       displayImage(hiList[value3], 1);
-      displayImage(topList[value4], 3);
+      //displayImage(topList[value4], 3);
+	  displayImage("tbd",3);
 
       document.getElementById("nl1").innerHTML = lowList[(value1 + 1) % lowList.length];
       document.getElementById("nl2").innerHTML = lowList[(value1 + 2) % lowList.length];
