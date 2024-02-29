@@ -206,7 +206,7 @@
     const lowList = ["Chameleos", "Black Diablos", "Kirin", "Red Khezu", "Gypceros", "Blangonga", "Shogun Ceanataur", "Pink Rathian", "Dyuragaua", "Blue Kut-Ku", "Basarios", "Congalala", "Hypnocatrice", "Azure Rathalos", "Lavasioth"];
     const midList = ["Akantor", "Nono Orugaron", "Espinas", "Teostra", "Bright Hypnocatrice", "Red Khezu", "Doragyurosu", "Rajang", "Garuga", "Pink Rathian", "Blue Kut-Ku", "Flaming Espinas", "Kamu Orugaron", "Gravios","Kushala", "Tigrex", "Black Diablos"];
     const hiList = ["Bright Hypnocatrice", "Azure Rathalos", "Flaming Espinas", "Red Khezu", "Black Diablos", "Blue Kut-Ku", "Garuga", "Espinas", "Akantor", "Tigrex", "Basarios", "Rajang", "Hypnocatrice", "Khezu", "Congalala", "Kut-Ku", "Lavasioth", "Gravios", "Shogun Ceanataur", "Diablos","Pink Rathian"];
-    const topList = ["Kirin", "Gurenzeburu", "Kushala", "Dyuragaua", "Teostra", "Doragyurosu", "Gogomoa"];
+    const topList = ["Kushala", "Dyuragaua", "Teostra", "Berukyurosu", "Kamu Orugaron" "Doragyurosu", "Gogomoa", "Kirin", "Gurenzeburu"];
     var incr = 1;
     var day;
 
@@ -247,13 +247,13 @@
       document.getElementById("lowsoul").innerHTML = lowList[value1];
       document.getElementById("midsoul").innerHTML = midList[value2];
       document.getElementById("hisoul").innerHTML = hiList[value3];
-      //document.getElementById("topsoul").innerHTML = topList[value4];
-	  document.getElementById("topsoul").innerHTML = "to be discovered";
+      document.getElementById("topsoul").innerHTML = topList[value4];
+	  //document.getElementById("topsoul").innerHTML = "to be discovered";
       displayImage(lowList[value1], 2);
       displayImage(midList[value2], 4);
       displayImage(hiList[value3], 1);
-      //displayImage(topList[value4], 3);
-	  displayImage("tbd",3);
+      displayImage(topList[value4], 3);
+	  //displayImage("tbd",3);
 
       document.getElementById("nl1").innerHTML = lowList[(value1 + 1) % lowList.length];
       document.getElementById("nl2").innerHTML = lowList[(value1 + 2) % lowList.length];
